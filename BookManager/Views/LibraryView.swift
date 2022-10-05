@@ -8,7 +8,6 @@ import SwiftUI
 struct LibraryView: View {
   
   // @EnvironmentObject var library: Library
-//  @EnvironmentObject var libraryViewModel: LibraryViewModel
   @ObservedObject var libraryViewModel = LibraryViewModel()
   
   var body: some View {    

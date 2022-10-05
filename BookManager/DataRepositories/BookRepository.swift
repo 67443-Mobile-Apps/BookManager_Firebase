@@ -36,7 +36,7 @@ class BookRepository: ObservableObject {
   // MARK: CRUD methods
   func add(_ book: Book) {
     do {
-      var newBook = book
+      let newBook = book
       _ = try store.collection(path).addDocument(from: newBook)
     } catch {
       fatalError("Unable to add book: \(error.localizedDescription).")
