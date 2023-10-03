@@ -34,7 +34,7 @@ class BookRepository: ObservableObject {
   }
 
   // MARK: CRUD methods
-  func add(_ book: Book) {
+  func create(_ book: Book) {
     do {
       let newBook = book
       _ = try store.collection(path).addDocument(from: newBook)
@@ -53,7 +53,7 @@ class BookRepository: ObservableObject {
     }
   }
 
-  func remove(_ book: Book) {
+  func delete(_ book: Book) {
     guard let bookId = book.id else { return }
     
     store.collection(path).document(bookId).delete { error in

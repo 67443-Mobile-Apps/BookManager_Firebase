@@ -22,6 +22,11 @@ class LibraryViewModel: ObservableObject {
   }
 
   func add(_ book: Book) {
-    bookRepository.add(book)
+    bookRepository.create(book)
   }
+  
+  func destroy(_ book: Book) {
+    bookRepository.delete(book)
+  }
+  
 }

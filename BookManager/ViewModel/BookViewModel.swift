@@ -25,7 +25,8 @@ class BookViewModel: ObservableObject, Identifiable {
     bookRepository.update(book)
   }
 
-  func remove() {
-    bookRepository.remove(book)
+  func destroy(book: Book) {
+    bookRepository.delete(book)
   }
+  
 }
